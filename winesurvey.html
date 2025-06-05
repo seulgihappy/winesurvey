@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>WINE YOUR WAY - 와인 성향 테스트</title>
+  <style>
+    body { font-family: 'Pretendard', sans-serif; padding: 2rem; max-width: 800px; margin: auto; line-height: 1.7; background: #fffaf9; }
+    h1 { text-align: center; color: #8B0000; }
+    .question { margin-bottom: 20px; }
+    .result { margin-top: 30px; font-weight: bold; white-space: pre-wrap; background: #fff4f4; padding: 1.5rem; border-left: 5px solid #aa2b5f; }
+    button { padding: 12px 24px; font-size: 16px; cursor: pointer; background: #aa2b5f; color: white; border: none; border-radius: 5px; }
+  </style>
+</head>
+<body>
+  <h1>🍷 WINE YOUR WAY</h1>
+  <form id="quizForm">
+<img src="wine_img800.jpg" alt="와인 이미지" style="display: block; margin: 0 auto;">
+    <!-- 질문 1~10 -->
+    <div class="question">
+      <p>1. 여행을 떠날 때 선호하는 여행지는?</p>
+      <label><input type="radio" name="q1" value="a"> 도시의 트렌디한 카페와 레스토랑</label><br>
+      <label><input type="radio" name="q1" value="b"> 고요한 자연 속 휴양지</label><br>
+      <label><input type="radio" name="q1" value="c"> 예술과 문화가 살아있는 유서 깊은 마을</label>
+    </div>
+
+    <div class="question">
+      <p>2. 여행 동반자는 주로 누구인가요?</p>
+      <label><input type="radio" name="q2" value="a"> 친구/연인과 함께</label><br>
+      <label><input type="radio" name="q2" value="b"> 가족과 함께</label><br>
+      <label><input type="radio" name="q2" value="c"> 혼자만의 시간</label>
+    </div>
+
+    <div class="question">
+      <p>3. 여행 중 가장 기대되는 순간은?</p>
+      <label><input type="radio" name="q3" value="a"> 새로운 맛집 탐방</label><br>
+      <label><input type="radio" name="q3" value="b"> 아름다운 풍경 감상</label><br>
+      <label><input type="radio" name="q3" value="c"> 현지 문화 체험</label>
+    </div>
+
+    <div class="question">
+      <p>4. 여행지에서 선호하는 식사 스타일은?</p>
+      <label><input type="radio" name="q4" value="a"> 코스 요리와 와인 페어링</label><br>
+      <label><input type="radio" name="q4" value="b"> 캐주얼한 현지 음식</label><br>
+      <label><input type="radio" name="q4" value="c"> 가볍게 즐기는 브런치</label>
+    </div>
+
+    <div class="question">
+      <p>5. 여행 중 휴식 시간에는 무엇을 하나요?</p>
+      <label><input type="radio" name="q5" value="a"> 독서나 음악 감상</label><br>
+      <label><input type="radio" name="q5" value="b"> 산책이나 명상</label><br>
+      <label><input type="radio" name="q5" value="c"> 액티비티와 스포츠</label>
+    </div>
+
+    <div class="question">
+      <p>6. 여행지에서 가장 중요하게 생각하는 요소는?</p>
+      <label><input type="radio" name="q6" value="a"> 분위기와 감성</label><br>
+      <label><input type="radio" name="q6" value="b"> 맛있는 음식과 음료</label><br>
+      <label><input type="radio" name="q6" value="c"> 다양한 체험 프로그램</label>
+    </div>
+
+    <div class="question">
+      <p>7. 평소 즐겨 마시는 음료는?</p>
+      <label><input type="radio" name="q7" value="a"> 진한 커피나 홍차</label><br>
+      <label><input type="radio" name="q7" value="b"> 상큼한 주스나 에이드</label><br>
+      <label><input type="radio" name="q7" value="c"> 달콤한 칵테일</label>
+    </div>
+
+    <div class="question">
+      <p>8. 음식 취향은 어떤 편인가요?</p>
+      <label><input type="radio" name="q8" value="a"> 풍부하고 깊은 맛(스테이크, 치즈 등)</label><br>
+      <label><input type="radio" name="q8" value="b"> 신선하고 산뜻한 맛(해산물, 샐러드 등)</label><br>
+      <label><input type="radio" name="q8" value="c"> 가볍고 달콤한 맛(디저트, 과일 등)</label>
+    </div>
+
+    <div class="question">
+      <p>9. 와인을 선택할 때 가장 중요하게 생각하는 점은?</p>
+      <label><input type="radio" name="q9" value="a"> 향과 풍미의 깊이</label><br>
+      <label><input type="radio" name="q9" value="b"> 상쾌함과 산뜻함</label><br>
+      <label><input type="radio" name="q9" value="c"> 색감과 분위기</label>
+    </div>
+
+    <div class="question">
+      <p>10. 여행지에서 와인을 마신다면 어떤 순간이 좋을까요?</p>
+      <label><input type="radio" name="q10" value="a"> 저녁 식사와 함께 분위기 있게</label><br>
+      <label><input type="radio" name="q10" value="b"> 낮에 테라스에서 가볍게</label><br>
+      <label><input type="radio" name="q10" value="c"> 특별한 순간을 기념하며</label>
+    </div>
+
+    <button type="submit">결과 확인하기</button>
+  </form>
+
+  <div class="result" id="resultBox"></div>
+
+  <script>
+    const redText = `🍷 당신은 깊은 여운의 ‘레드와인’ 스타일 여행자입니다\n\n도시의 불빛 속, 무드 있는 레스토랑에서 풍성한 스테이크와 한 잔의 와인.\n당신은 여행에서도 깊이와 분위기를 가장 중요하게 생각하는 감성 충만한 타입.\n예술과 문화가 스며든 거리에서 느긋한 저녁을 보내며, 향과 풍미가 진한 와인처럼\n묵직하고 여운 있는 순간을 즐깁니다.\n삶의 디테일을 사랑하는 ‘레드와인’처럼 고급스럽고 섬세한 여행을 합니다.`;
+
+    const whiteText = `🥂 당신은 청량하고 생기 넘치는 ‘화이트와인’ 스타일 여행자입니다\n\n맑은 햇살, 탁 트인 바닷가, 신선한 해산물과 함께하는 낮의 여유.\n고요한 자연 속에서 산책하거나 테라스에서 브런치를 즐기며,\n화이트와인처럼 투명한 감성과 밝은 에너지를 가진 당신은\n가벼운 미소와 함께 모든 것을 싱그럽게 만듭니다.`;
+
+    const roseText = `🌸 당신은 낭만 가득한 ‘로제와인’ 스타일 여행자입니다\n\n예술적 감성과 달콤한 기분, 그 사이 어딘가에 있는 당신.\n작고 아기자기한 카페에 앉아 현지 문화를 감상하는 그 순간이 설렙니다.\n디저트처럼 사랑스러운 순간을 기념할 줄 아는 당신은 로제와인처럼\n다채롭고 로맨틱한 여행을 그려갑니다.`;
+
+    document.getElementById('quizForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      let form = e.target;
+      let answers = [];
+      for (let i = 1; i <= 10; i++) {
+        let val = form['q' + i].value;
+        if (!val) {
+          alert(`${i}번 질문에 응답해주세요.`);
+          return;
+        }
+        answers.push(val);
+      }
+
+      let score = { red: 0, white: 0, rose: 0 };
+      answers.forEach(ans => {
+        if (ans === 'a') score.red++;
+        else if (ans === 'b') score.white++;
+        else if (ans === 'c') score.rose++;
+      });
+
+      let maxStyle = Object.keys(score).reduce((a, b) => score[a] >= score[b] ? a : b);
+      let result = maxStyle === 'red' ? redText : (maxStyle === 'white' ? whiteText : roseText);
+
+      document.getElementById('resultBox').textContent = result;
+    });
+  </script>
+</body>
+</html>
